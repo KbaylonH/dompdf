@@ -861,9 +861,9 @@ class Helpers
 
         try {
             if ($is_local_path || ini_get('allow_url_fopen')) {
-                if ($is_local_path === false) {
+                /*if ($is_local_path === false) {
                     $uri = Helpers::encodeURI($uri);
-                }
+                }*/
                 if (isset($maxlen)) {
                     $result = file_get_contents($uri, null, $context, $offset, $maxlen);
                 } else {
